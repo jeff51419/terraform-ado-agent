@@ -30,4 +30,4 @@ jobs:
         with:
           context: docker/ado-selfhosted-aci
           push: true
-          tags: jeff51419/dockeragent:latest
+          tags: jeff51419/dockeragent:v3.0.0
