@@ -14,19 +14,16 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
     wget \
     unzip \
     ansible \
-    default-jdk \
     maven \
     software-properties-common
 
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/java
-
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
-
-ARG TF_VERSION=1.4.5
 
 # Can be 'linux-x64', 'linux-arm64', 'linux-arm', 'rhel.6-x64'.
 ENV TARGETARCH=linux-x64
 
+# terraform
+ARG TF_VERSION=1.4.5
 RUN wget -q https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
 
 RUN unzip terraform_${TF_VERSION}_linux_amd64.zip && mv terraform bin/terraform
