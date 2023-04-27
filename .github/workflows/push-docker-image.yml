@@ -28,6 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: docker/ubuntu-1804
+          context: docker/terraform-agent
           push: true
-          tags: jeff51419/ado-agent:v2.0.0
+          tags: jeff51419/ado-agent:v4.0.0
