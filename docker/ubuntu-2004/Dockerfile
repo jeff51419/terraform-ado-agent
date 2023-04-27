@@ -14,7 +14,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
     wget \
     unzip \
     ansible \
+    default-jdk \
+    maven \
     software-properties-common
+
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 

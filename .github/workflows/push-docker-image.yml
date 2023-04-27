@@ -30,4 +30,4 @@ jobs:
         with:
           context: docker/ubuntu-2004
           push: true
-          tags: jeff51419/ado-agent:ubuntu-2004
+          tags: jeff51419/ado-agent:ubuntu-2004-jdk
